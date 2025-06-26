@@ -1,0 +1,129 @@
+       API Coding Challenge-2
+<----------------------------------->
+
+1.create user: http://localhost:8080/api/auth/register
+
+{
+    "username": "Prasanan",
+    "password": "pass1234"
+}
+ 
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQcmFzYW5hbiIsImlhdCI6MTc1MDkxNTcwMywiZXhwIjoxNzUxMDAyMTAzfQ.9vDBBWdgd1ryuPDzdTMOrWq8GkC_3yXZQMcO0ENyvd8",
+    "type": "Bearer",
+    "username": "Prasanan",
+    "role": "USER"
+}
+
+2.Login user: http://localhost:8080/api/auth/login
+
+{
+    "username": "Prasanan",
+    "password": "pass1234"
+}
+
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQcmFzYW5hbiIsImlhdCI6MTc1MDkxNTc2NiwiZXhwIjoxNzUxMDAyMTY2fQ.oM-MusoZB778qlKBe0_eqHmm7_hvzsTAfdsFpvw99_w",
+    "type": "Bearer",
+    "username": "Prasanan",
+    "role": "USER"
+}
+
+3.Authorisation check: http://localhost:8080/api/auth/health
+
+  {
+    "username": "Surya",
+    "password": "password123"
+  }
+Auth service is running!
+
+4.get all tasks: http://localhost:8080/api/tasks
+
+  {
+    "username": "Monish",
+    "password": "pass123"
+  }
+[
+    {
+        "id": 2,
+        "title": "Complete Project Documentation",
+        "description": "Write comprehensive documentation for the task management API",
+        "dueDate": "2025-06-28",
+        "priority": "HIGH",
+        "status": "PENDING"
+    }
+]
+
+5.Create new task: http://localhost:8080/api/tasks
+{
+    "id": 3,
+    "title": "Complete Project Documentation",
+    "description": "Write comprehensive documentation for the task management API",
+    "dueDate": "2025-06-28",
+    "priority": "LOW",
+    "status": "PENDING"
+}
+{
+    "id": 7,
+    "title": "Complete Project Documentation",
+    "description": "Write comprehensive documentation for the task management API",
+    "dueDate": "2025-06-28",
+    "priority": "LOW",
+    "status": "PENDING"
+}
+
+6.get task by id: 
+
+http://localhost:8080/api/tasks/2
+http://localhost:8080/api/tasks/4
+http://localhost:8080/api/tasks/5
+http://localhost:8080/api/tasks/6
+http://localhost:8080/api/tasks/8
+http://localhost:8080/api/tasks/9
+
+  {
+    "username": "Surya",
+    "password": "password123"
+  }
+{
+    "id": 7,
+    "title": "Complete Project Documentation",
+    "description": "Write comprehensive documentation for the task management API",
+    "dueDate": "2025-06-28",
+    "priority": "LOW",
+    "status": "PENDING"
+}
+
+7.update tasj: 
+
+http://localhost:8080/api/tasks/2
+http://localhost:8080/api/tasks/4
+http://localhost:8080/api/tasks/5
+http://localhost:8080/api/tasks/6
+http://localhost:8080/api/tasks/8
+http://localhost:8080/api/tasks/9
+
+  {
+    "title": "Complete Project Report of HCL",
+    "description": "Write comprehensive documentation for the task management API",
+    "dueDate": "2025-06-28",
+    "priority": "HIGH",
+    "status": "PENDING"
+  }
+{
+    "id": 2,
+    "title": "Complete Project Report of HCL",
+    "description": "Write comprehensive documentation for the task management API",
+    "dueDate": "2025-06-28",
+    "priority": "HIGH",
+    "status": "PENDING"
+}
+
+8.Delete task: 
+
+http://localhost:8080/api/tasks/2
+http://localhost:8080/api/tasks/4
+http://localhost:8080/api/tasks/5
+http://localhost:8080/api/tasks/6
+http://localhost:8080/api/tasks/8
+http://localhost:8080/api/tasks/9
